@@ -1,11 +1,5 @@
-  /* Paleta de cores: 
-  vermelho: #b41d1d
-  Laranja: #e85817
-  Amarelo: #f8c71d
-  Azul: #025360
-  Preto: #000000 */
 
-  @import url('https://media.gazetadopovo.com.br/2020/08/31122938/1084-960x540.jpg');
+  @import url('');
 html{
     scroll-behavior: smooth;
 }
