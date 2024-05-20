@@ -35,7 +35,7 @@
         <input id="input_senha" class="digitar" type="password" placeholder="Digite a sua senha...">
         <br>
         <div class="botoes-container">
-            <button onclick="Entrar()">Acessar</button>
+            <button onclick="entrar()">Acessar</button>
             <button onclick="cancelar()">Cancelar</button><br>
             <p style="color: white;">Ainda não possui seu cadastro? Se inscreva<a href="cadastro.html" style="color: white;"> aqui <link rel="stylesheet" href="cadastro.html"></a></p>
         </div>
@@ -46,39 +46,75 @@
 </html>
 
 <script>
-    function cancelar() {
-        input_email.value = "";
-        input_senha.value = "";
-        input_nome.value = "";
+
+
+    function entrar() {
+        // aguardar();
+
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            // cardErro.style.display = "block".
+          alert ('Mensagem de erro para todos os campos em branco');
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.NomeCompleto;
+                    sessionStorage.ID_USUARIO = json.id;
+                    
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    // finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
     }
 
-    function Entrar() {
-        var url = "usuario.html";
-
-        var nome = input_nome.value
-        var email = input_email.value
-        var senha = input_senha.value
-
-        var emailVal = email.indexOf("@", ".");
-
-        if (nome.length <= 1) {
-            alert("Nome inválido. Por favor, insira um nome válido.");
-        }
-        if (emailVal < 0) {
-            alert("Email inválido. Por favor, insira um email válido.");
-        }
-        if (senha != 'Sprint2') {
-            alert('Senha incorreta')
-        }
-
-        if (nome == 'Fernando Brandão' && email == 'fernando@sptech.school' && senha == 'Sprint2') {
-            alert ('Login efetuado com sucesso')
-            window.open(url, "_self")
-        }else {
-            alert ('Informações incorretas')
-        } if (nome == '' || email == '' || senha == '') {
-            alert ('Espaços em branco')
-        } 
-    
+    function sumirMensagem() {
+        // cardErro.style.display = "none"
     }
+
 </script>
