@@ -175,13 +175,13 @@ header{
 }
 
 .quem_somos_card {
-    width: 70%;
+    width: 1200px;
     text-align: left;
     color: white    ;
     font-size: 20px;
     background-color: black;
     border-radius: 10px;
-    height: 150px;
+    height: 200px;
 }
 
 .quem_somos_card h4{
@@ -195,11 +195,11 @@ header{
 .quem_somos_card_comp {
     text-align: right;
     font-size: 20px;
-    width: 70%;
+    width: 1200px;
     background-color: black;
     color: white;
     border-radius: 10px;
-    height: 150px;
+    height: 200px;
 }
 .quem_somos_card_comp h4 {
     color:#280ECC;
@@ -234,8 +234,8 @@ header{
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    width: auto;
-    height: auto;
+    width: 500px;
+    height: 500px;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 20px;
@@ -253,12 +253,16 @@ header{
 }
 
 .titulo_somos{
-    height: 50%;
-    font-size: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    justify-content: end;
-    align-items: end;
-    flex-direction: row-reverse;
+    font-size: 40px;
+     border: 2px solid black;
+      padding: 10px;
+       text-align: center;
+       height: 50%;
+       font-size: 25px;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       justify-content: end;
+       align-items: end;
+       flex-direction: row-reverse;
 }
 
 footer{
@@ -284,3 +288,23 @@ footer{
 .github{
     width: 100px;
 }
+.onu1{
+    font-size: 40px;
+     border: 2px solid black;
+      padding: 10px;
+       text-align: center;
+       height: 50%;
+       font-size: 25px;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       justify-content: end;
+       align-items: end;
+       flex-direction: row-reverse;
+}
+
+
+/* height: 50%;
+font-size: 50px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+justify-content: end;
+align-items: end;
+flex-direction: row-reverse; */
