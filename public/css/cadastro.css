@@ -1,5 +1,5 @@
 body {
-  background-image: url('https://cevisa.org.br/spa/wp-content/uploads/2021/02/atleta.jpeg');
+  background-image: url('https://w0.peakpx.com/wallpaper/320/805/HD-wallpaper-estadio-do-morumbi-sunset-empty-sradium-soccer-morumbi-sao-paulo-stadium-brazil-brazilian-stadiums.jpg');
   background-position: center;
   background-size: cover;
   display: flex;
@@ -53,18 +53,18 @@ body {
 
 .titulo-data{
   text-align: center;
-  color: #1AC474;
+  color: #280ECC;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(250, 248, 248, 0.8);
   width: 600px;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  box-shadow: 0 0 10px #1AC474;
+  box-shadow: 0 0 10px #280ECC;
   padding: 20px;
   margin-top: 50px;
   margin-left: auto;
@@ -93,14 +93,14 @@ button:hover {
 }
 
 .titulo {
-  color: #1AC474;
+  color: #280ECC;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-bottom: 10px;
 }
 
 .titulo2 {
-  color: #1AC474;
+  color: #280ECC;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 5px;
   left: 0;
