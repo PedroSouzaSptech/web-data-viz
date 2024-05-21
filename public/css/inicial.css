@@ -1,5 +1,5 @@
 
-  @import url('');
+
 html{
     scroll-behavior: smooth;
 }
@@ -49,9 +49,11 @@ header{
 
 
 .banner{
-    background-image: url('https://abreucardiologia.com.br/wp-content/uploads/2019/08/jogging-2343558_1920.jpg');
+    background-image: url('https://tntsports.com.br/__export/1698342076500/sites/esporteinterativo/img/2023/10/26/lucas-moura-gazeta-press-foto-1955831.jpg_2066882770.jpg');
     width: 100%;
     height: 700px;
+    /* background: rgba(250, 248, 248, 0.8); */
+    color: red;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
@@ -132,6 +134,7 @@ header{
     align-items: center;
 }
 .quem_somos h1 {
+
     text-align: left;
     width: 100%;
     /* color: #280ECC; */
@@ -170,7 +173,8 @@ header{
 
 .quem_somos_card {
     width: 1200px;
-    text-align: left;
+    padding: 20px;
+    text-align: center;
     color: white    ;
     font-size: 20px;
     background-color: black;
@@ -179,6 +183,7 @@ header{
 }
 
 .quem_somos_card h4{
+    
     font-size: larger;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #280ECC  ;
@@ -188,6 +193,7 @@ header{
 }
 .quem_somos_card_comp {
     text-align: right;
+    padding: 20px;
     font-size: 20px;
     width: 1200px;
     background-color: black;
@@ -231,7 +237,45 @@ header{
     width: 500px;
     height: 500px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 0 0 10px  #1AC474;
+    
+}
+.card_servicos1{
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: black;
+    border: #5e5ea8;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 0 0 10px  #1AC474;
+    
+}
+.card_servicos2{
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: black;
+    border: #5e5ea8;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 20px;
     box-shadow: 0 0 10px  #1AC474;
     
@@ -247,9 +291,9 @@ header{
 }
 
 .titulo_somos{
-    font-size: 40px;
+    /* font-size: 40px;
      border: 2px solid black;
-      padding: 10px;
+      padding: 10px; */
        text-align: center;
        height: 50%;
        font-size: 25px;
@@ -283,19 +327,26 @@ footer{
     width: 100px;
 }
 .onu1{
-    font-size: 40px;
+    /* font-size: 40px;
      border: 2px solid black;
-      padding: 10px;
+      padding: 10px; */
+      display: flex;
        text-align: center;
        height: 50%;
        font-size: 25px;
        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-       justify-content: end;
-       align-items: end;
-       flex-direction: row-reverse;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
 }
 
+.onu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 
+}
 /* height: 50%;
 font-size: 50px;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
